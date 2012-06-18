@@ -1,0 +1,12 @@
+<project name="build" default="deploy" basedir=".">
+	<property file="build.properties" />
+	<target name="deploy">
+		<copy todir="${deploy_dir}">
+			<fileset dir=".">
+				<exclude name="build.xml" />
+				<exclude name="build.properties" />
+				<exclude name=".project" />
+			</fileset>
+		</copy>
+	</target>
+</project>
