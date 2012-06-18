@@ -2,9 +2,8 @@
 	<property file="build.properties" />
 	<target name="deploy">
 		<copy todir="${deploy_dir}">
-			<fileset dir=".">
-				<exclude name="build.xml" />
-				<exclude name="build.properties" />
+			<fileset dir="..">
+				<exclude name="build" />
 				<exclude name=".project" />
 			</fileset>
 		</copy>
